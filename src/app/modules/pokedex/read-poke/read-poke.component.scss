@@ -1,0 +1,258 @@
+fieldset {
+  margin-top: 20px;
+  background-color:#fd8e86;
+  max-width:500px;
+  padding:16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: ridge 5px;
+  border-color: rgb(253, 16, 16);
+}
+
+fieldset:nth-child(2) {
+  width: 50%;
+  height: 600px;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 15%;
+
+}
+
+fieldset:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-border 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+@keyframes glowing-border {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+fieldset:hover:before {
+  border-color: #111;
+}
+
+/*
+.blink-bg::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+*/
+
+
+h4 {
+  outline: none;
+  background-position: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-size: x-large;
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+  margin-right: 0.625%;
+  text-align: center;
+  line-height: 3;
+  color: rgb(53, 16, 216);
+}
+
+p {
+    outline: none;
+    background-position: center;
+    font-size: large;
+    font-weight: bold;
+    display: inline-block;
+    width: 100%;
+    margin-right: 0.625%;
+    text-align: center;
+    line-height: 3;
+    color: rgb(66, 133, 21);
+}
+
+.type {
+  background-position: center;
+    font-size: x-large;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-decoration: underline;
+    display: block;
+    width: 35%;
+    margin: auto;
+    margin-top: 20px;
+    color: rgb(87, 56, 0);
+}
+
+.stat{
+  background-position: center;
+  display: block;
+  width: 35%;
+  margin: auto;
+  line-height: 3;
+    color: rgb(84, 2, 95);
+}
+
+img {
+  display: block;
+  width: 35%;
+  margin: auto;
+}
+
+.image-clignote  {
+  animation-duration: .9s;
+  animation-name: clignoter;
+  animation-iteration-count: infinite;
+  transition: none;
+}
+@keyframes clignoter {
+ 0%   { opacity:1; }
+ 40%   {opacity:0; }
+ 100% { opacity:1; }
+}
+
+.blink-bg{
+  color: #fff;
+  animation: blinkingBackground 5s infinite;
+}
+@keyframes blinkingBackground{
+  0%		{ background-color: #9efaa3;}
+  25%		{ background-color: #8bd2fc;}
+  50%		{ background-color: #b4fc8b;}
+  75%		{ background-color: #fd84df;}
+  100%	        { background-color: #6dd9fd;}
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* Aligner horizontalement les éléments */
+  align-items: center; /* Aligner verticalement les éléments */
+}
+
+
+fieldset.blink-bg {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+fieldset.blink-bg:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+fieldset.blink-bg:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #7801bdad;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+

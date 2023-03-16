@@ -1,0 +1,20 @@
+<div class="container">
+  <fieldset class="blink-bg">
+    <img class="image-clignote" width="100" [src]="monPokemon.sprites.front_default" alt="">
+    <h4>{{monPokemon.name}}</h4>
+
+    <p>{{monPokemon.weight/10}} Kg</p>
+
+    <p>{{monPokemon.height*10}} Cm</p>
+  </fieldset>
+
+  <fieldset class="blink-bg">
+
+    <app-types-poke class="type" [types]="monPokemon.types" ></app-types-poke>
+
+
+    <app-stat-poke class="stat" [stats]="monPokemon.stats" ></app-stat-poke>
+
+
+  </fieldset>
+</div>

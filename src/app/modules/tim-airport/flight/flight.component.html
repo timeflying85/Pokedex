@@ -1,4 +1,13 @@
+<!--
 <ul>
   <li *ngFor="let flight of flights">{{ flight.id }}</li>
 </ul>
-
+-->
+<div *ngFor="let flight of flights">
+  <h2>{{ flight.id }}</h2>
+  <p><b>Départ :</b> {{ flight.departure.name }}</p>
+  <p><b>Destination :</b> {{ flight.destination.name }}</p>
+  <p><b>Captain :</b> {{ flight.captain.name }}</p>
+  <p><b>Copilot :</b> {{ flight.firstOfficer.name }}</p>
+  <p><b>Avion :</b> {{ flight.plane.callSign }} / {{ flight.plane.capacity }} seats</p>
+</div>

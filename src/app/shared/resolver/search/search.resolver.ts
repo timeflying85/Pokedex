@@ -5,8 +5,9 @@ import {
   ActivatedRouteSnapshot
 } from '@angular/router';
 import { catchError, Observable, of } from 'rxjs';
-import { pokemon } from '../models/pokemon';
-import { PokeService } from '../services/poke/poke.service';
+import { pokemon } from '../../models/pokemon';
+import { PokeService } from '../../services/poke/poke.service';
+
 
 @Injectable({
   providedIn: 'root'

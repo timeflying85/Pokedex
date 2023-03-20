@@ -8,7 +8,11 @@ a {
   margin-right: 0.625%;
   text-align: center;
   line-height: 3;
-  color: rgb(43, 17, 158);
+  color: rgb(219, 16, 152);
+}
+
+ul {
+  list-style-type: none;
 }
 
 li:last-child a {
@@ -16,31 +20,43 @@ li:last-child a {
 }
 
 a:link, a:visited, a:focus {
- background: rgb(190, 79, 5);
+ background: none;
 }
 
-a:hover {
- background: rgb(175, 115, 2);
-}
 
 a:active {
-  background: red;
   color: rgb(169, 156, 241);
 }
 
-div {
-  position: relative;
-}
 
 div a {
+  text-decoration: none;
   position: relative;
   top: 20px; /* ajustez cette valeur pour déplacer le contenu vers le haut ou le bas */
   left: 49%;
   font-family: 'Lobster', cursive;
   transform: translateX(-50%);
   font-size: 1rem;
-  color: rgb(52, 15, 185);
+  color: rgb(21, 189, 231);
 }
+
+div a:hover {
+  color: rgb(175, 115, 2);
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 33%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 1200px;
+}
+
 
 
 

@@ -1,20 +1,24 @@
-<div class="container">
-  <fieldset class="blink-bg">
-    <img class="image-clignote" width="100" [src]="monPokemon.sprites.front_default" alt="">
-    <h4>{{monPokemon.name}}</h4>
+<body>
 
-    <p>{{monPokemon.weight/10}} Kg</p>
+  <div class="container">
+    <fieldset class="blink-bg">
+      <img class="image-clignote" width="100" [src]="monPokemon.sprites.front_default" alt="">
+      <h4>{{monPokemon.name}}</h4>
 
-    <p>{{monPokemon.height*10}} Cm</p>
-  </fieldset>
+      <p>{{monPokemon.weight/10}} Kg</p>
 
-  <fieldset class="blink-bg">
+      <p>{{monPokemon.height*10}} Cm</p>
+    </fieldset>
 
-    <app-types-poke class="type" [types]="monPokemon.types" ></app-types-poke>
+    <fieldset class="blink-bg">
+
+      <app-types-poke class="type" [types]="monPokemon.types" ></app-types-poke>
 
 
-    <app-stat-poke class="stat" [stats]="monPokemon.stats" ></app-stat-poke>
+      <app-stat-poke class="stat" [stats]="monPokemon.stats" ></app-stat-poke>
 
 
-  </fieldset>
-</div>
+    </fieldset>
+  </div>
+
+</body>

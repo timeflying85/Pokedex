@@ -11,6 +11,7 @@ export interface AirportDTO {
   id: number;
   name: string;
   location: string;
+  planeParking: number;
 }
 
 export interface PlaneDTO {
@@ -29,4 +30,16 @@ export interface PilotDTO {
 export interface pilotDTO{
   id : number,
   name : string
+}
+
+export interface FlightInsertForm {
+  id: number;
+  departureTime: Date;
+  arrivalTime: Date;
+  captain: string;
+  firstOfficer: string;
+  departureAirportId: number;
+  arrivalAirportId: number;
+  plane: number;
+  company: number;
 }

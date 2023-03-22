@@ -2,6 +2,8 @@ export interface FlightDTO {
   id: number;
   departure: AirportDTO;
   destination: AirportDTO;
+  departureTime: string;
+  arrivalTime: string;
   captain: pilotDTO;
   firstOfficer: pilotDTO;
   plane: PlaneDTO;

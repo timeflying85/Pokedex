@@ -1,0 +1,111 @@
+*{
+  font-family: 'Lobster', cursive;
+}
+
+
+li {
+  line-height: 3;
+  font-size: larger;
+  color: rgb(253, 171, 19);
+}
+
+ul {
+  list-style: none;
+}
+
+b {
+  color: aqua;
+}
+
+h3 {
+  text-align: center;
+  text-decoration: underline;
+  padding-top: 5px;
+  padding-bottom: 25px;
+  margin-top: auto;
+  color: rgb(21, 189, 231);
+  font-family: 'Lobster', cursive;
+}
+
+fieldset {
+  position: relative;
+  border-style: groove;
+  border-radius: 15px;
+  border-color: rgb(21, 189, 231);
+  margin-bottom: 10px;
+  display: flex;
+  box-sizing: border-box;
+  padding: 5%;
+  //flex-direction: row;
+  //flex-basis: auto;
+  //flex-wrap: nowrap;
+
+}
+
+fieldset {
+  position: relative;
+  //height: 100vh;
+  //position: relative;
+  border: none;
+  max-width: 100%;
+  height: auto;
+  //margin: 60px;
+  //width: 100%;
+  //height: 100%;
+  margin-top: 6%;
+  margin-left: 0.5%;
+  background-image: url('../../../../../assets/images/airport-background.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+}
+
+
+b {
+  color: rgb(10, 228, 39);
+  line-height: 2;
+  font-weight: bolder;
+  font-size: larger;
+  text-transform: capitalize;
+}
+
+.content {
+  margin-top: 120px;
+  padding: 30px;
+}
+
+.update {
+  text-decoration: none;
+  font-size: x-large;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  padding-left: 200px;
+  color: rgb(167, 9, 199);
+}
+
+.all {
+  text-decoration: none;
+  font-size: x-large;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 20px;
+  padding-right: 20px;
+  color: rgb(29, 204, 37);
+}
+
+a:hover {
+  color: rgb(246, 250, 20);
+}
+
+div {
+  display:flex;
+  justify-content:center;
+  flex-direction:column;
+  margin: auto;
+  padding-bottom: 0;
+}

@@ -6,14 +6,17 @@
 <body>
   <div class="content">
     <h1>List of Flights</h1>
+    <button class="button"><a class="create" [routerLink]="['../create']" >Create Flight</a></button>
     <div *ngFor="let flight of flights">
       <fieldset>
-  <!--  <h2>{{ flight.id }}</h2> -->
         <p><b>Departure :</b> {{ flight.departure.name }} <br> <b>Location :</b> {{flight.departure.location}} </p>
         <p><b>Destination :</b> {{ flight.destination.name }} <br> <b>Location :</b> {{flight.destination.location}} </p>
         <p><b>Captain :</b> {{ flight.captain.name }}</p>
         <p><b>Copilot :</b> {{ flight.firstOfficer.name }}</p>
         <p><b>Plane :</b> {{ flight.plane.callSign }} / {{ flight.plane.capacity }} seats</p>
+        <a class="update" [routerLink]="['../update' + flight.id]">Update</a>
+        <a class="delete" (click)="deleteFlight(flight.id)">Delete</a>
+        <a class="one" [routerLink]="['../' + flight.id]"> -> Flight details</a>
       </fieldset>
     </div>
   </div>

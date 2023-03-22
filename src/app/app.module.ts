@@ -10,7 +10,7 @@ import { BannerComponent } from './shared/components/banner/banner.component';
 @NgModule({
   declarations: [
     AppComponent,
-    BannerComponent,
+    BannerComponent
 
   ],
   imports: [

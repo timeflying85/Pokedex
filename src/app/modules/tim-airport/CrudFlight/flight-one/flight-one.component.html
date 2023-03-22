@@ -1,0 +1,34 @@
+<br>
+
+<fieldset>
+
+<div *ngIf="selectedFlight">
+  <h3>Flight Details</h3>
+  <ul>
+    <li><b>Departure </b> : {{ selectedFlight.departure.name }} </li>
+    <li><b>Take-Off Time </b> : {{selectedFlight.departureTime}}</li>
+    <li><b>Departure Location </b> : {{selectedFlight.departure.location}} </li>
+    <li><b>Destination </b> : {{ selectedFlight.destination.name }} </li>
+    <li><b>Arrival Time </b> : {{selectedFlight.arrivalTime}}</li>
+    <li><b>Destination Location </b> : {{selectedFlight.destination.location}} </li>
+    <li><b>Captain </b> : {{ selectedFlight.captain.name }}</li>
+    <li><b>Copilot </b> : {{ selectedFlight.firstOfficer.name }}</li>
+    <li><b>Plane </b> : {{ selectedFlight.plane.callSign }} / {{ selectedFlight.plane.capacity }} seats</li>
+  </ul>
+  <br>
+<a class="update" [routerLink]="['../update', selectedFlight.id]">Update</a>
+<p></p>
+<!-- <a class="delete" [routerLink]="['../delete', selectedFlight.id]">Delete</a> -->
+<p></p>
+<a class="all" routerLink="../all">Back to List</a>
+
+
+</div>
+
+
+<div *ngIf="selectedFlight == undefined">
+    <h3>Flight Not Found</h3>
+</div>
+
+</fieldset>
+

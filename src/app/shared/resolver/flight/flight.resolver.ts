@@ -17,8 +17,6 @@ export class FlightResolver implements Resolve<boolean> {
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<FlightDTO | any> {
 
-
-
     return this._service.getFlight();
   }
 }

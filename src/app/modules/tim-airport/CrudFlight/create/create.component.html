@@ -1,1 +1,58 @@
-<p>create works!</p>
+<fieldset>
+  <a class="all" routerLink="../all">Back to List</a>
+  <form [formGroup]="flightForm" (ngSubmit)="createFlight()">
+
+    <div>
+      <label for="departure">Departure : </label>
+      <input type="text" id="departure" formControlName="departure" placeholder="Enter your departure"/>
+      <span *ngIf="flightForm.controls['departure'].invalid && flightForm.controls['departure'].touched"> Departure is required</span>
+    </div>
+
+    <div>
+      <label for="destination">Destination : </label>
+      <input type="text" id="destination" formControlName="destination" placeholder="Choose your destination"/>
+      <span *ngIf="flightForm.controls['destination'].invalid && flightForm.controls['destination'].touched"> Destination is required</span>
+    </div>
+
+    <div>
+      <label for="departureTime">Departure Time : </label>
+      <input type="text" id="departureTime" formControlName="departureTime" placeholder="Enter ETD"/>
+      <span *ngIf="flightForm.controls['departureTime'].invalid && flightForm.controls['departureTime'].touched"> ETD is required</span>
+    </div>
+
+    <div>
+      <label for="arrivalTime">Arrival Time : </label>
+      <input type="text" id="arrivalTime" formControlName="arrivalTime" placeholder="Enter ETA"/>
+      <span *ngIf="flightForm.controls['arrivalTime'].invalid && flightForm.controls['arrivalTime'].touched"> ETA is required</span>
+    </div>
+
+    <div>
+      <label for="captain">Captain : </label>
+      <input type="text" id="captain" formControlName="captain" placeholder="Enter Captain Name"/>
+      <span *ngIf="flightForm.controls['captain'].invalid && flightForm.controls['captain'].touched"> Captain is required</span>
+    </div>
+
+    <div>
+      <label for="copilot">Copilot : </label>
+      <input type="text" id="copilot" formControlName="copilot" placeholder="Enter Copilot Name"/>
+      <span *ngIf="flightForm.controls['copilot'].invalid && flightForm.controls['copilot'].touched"> Copilot is required</span>
+    </div>
+
+    <div>
+      <label for="plane">Plane : </label>
+      <input type="text" id="plane" formControlName="plane" placeholder="Enter Plane Name" />
+      <span *ngIf="flightForm.controls['plane'].invalid && flightForm.controls['plane'].touched"> Plane is required</span>
+    </div>
+
+    <div>
+      <label for="company">Company : </label>
+      <input type="text" id="company" formControlName="company" placeholder="Enter Company Name" />
+      <span *ngIf="flightForm.controls['company'].invalid && flightForm.controls['company'].touched"> Company is required</span>
+    </div>
+
+    <p></p>
+
+    <button class="button" type="submit" (click)="createFlight()">Create Flight</button>
+
+  </form>
+</fieldset>

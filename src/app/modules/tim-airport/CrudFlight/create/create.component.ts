@@ -24,7 +24,8 @@ export class CreateComponent {
       arrivalTime: ['', [Validators.required]],
       captain: ['', [Validators.required]],
       copilot: ['', [Validators.required]],
-      plane: ['', [Validators.required]]
+      plane: ['', [Validators.required]],
+      company: ['', [Validators.required]]
     })
 
 

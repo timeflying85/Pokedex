@@ -5,6 +5,7 @@
 <div *ngIf="selectedFlight">
   <h3>Flight Details</h3>
   <ul>
+    <li><b>Company Name </b> : {{ selectedFlight.company.name }} , <span class="small"> based in </span>  {{selectedFlight.company.originCountry}} </li>
     <li><b>Departure </b> : {{ selectedFlight.departure.name }} </li>
     <li><b>Take-Off Time </b> : {{selectedFlight.departureTime}}</li>
     <li><b>Departure Location </b> : {{selectedFlight.departure.location}} </li>

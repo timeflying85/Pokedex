@@ -19,7 +19,7 @@ b {
 
 h3 {
   text-align: center;
-  text-decoration: underline;
+  font-size: x-large;
   padding-top: 5px;
   padding-bottom: 25px;
   margin-top: auto;
@@ -108,4 +108,12 @@ div {
   flex-direction:column;
   margin: auto;
   padding-bottom: 0;
+}
+
+.small {
+  color: rgb(10, 228, 39);
+  line-height: 2;
+  font-weight: bolder;
+  font-size: large;
+
 }

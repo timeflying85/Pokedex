@@ -2,11 +2,18 @@ export interface FlightDTO {
   id: number;
   departure: AirportDTO;
   destination: AirportDTO;
-  departureTime: string;
-  arrivalTime: string;
+  departureTime: Date;
+  arrivalTime: Date;
   captain: pilotDTO;
   firstOfficer: pilotDTO;
   plane: PlaneDTO;
+  company: CompanyDTO;
+}
+
+export interface CompanyDTO {
+  id: number;
+  name: string;
+  originCountry: string;
 }
 
 export interface AirportDTO {
@@ -43,5 +50,5 @@ export interface FlightInsertForm {
   departureAirportId: number;
   arrivalAirportId: number;
   plane: number;
-  company: number;
+  company: string;
 }

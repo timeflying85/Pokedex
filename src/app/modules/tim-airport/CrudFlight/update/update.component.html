@@ -1,1 +1,36 @@
-<p>update works!</p>
+<fieldset>
+    <a class="all" [routerLink]="['../../all']">Back to List</a>
+  <form *ngIf="flightToUpdate" [formGroup]="flightForm" (ngSubmit)="updateFlight()">
+    <div>
+      <label for="departure">Departure : </label>
+      <input type="text" id="departure" formControlName="departureAirportName" placeholder="New Departure" />
+    </div>
+    <div>
+      <label for="destination">Destination : </label>
+      <input type="text" id="destination" formControlName="destinationAirportName" placeholder="New Destination" />
+    </div>
+    <div>
+      <label for="departureTime">Departure Time : </label>
+      <input type="datetime-local" id="departureTime" formControlName="departureTime" />
+    </div>
+    <div>
+      <label for="arrivalTime">Arrival Time : </label>
+      <input type="datetime-local" id="arrivalTime" formControlName="arrivalTime" />
+    </div>
+    <div>
+      <label for="captain">Captain : </label>
+      <input type="text" id="captain" formControlName="captain" />
+    </div>
+    <div>
+      <label for="copilot">Co-pilot : </label>
+      <input type="text" id="copilot" formControlName="copilot" />
+    </div>
+    <div>
+      <label for="plane">Plane : </label>
+      <input type="text" id="plane" formControlName="plane" />
+    </div>
+    <p></p>
+    <button class="button" type="submit">Update</button>
+  </form>
+</fieldset>
+

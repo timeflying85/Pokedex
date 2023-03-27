@@ -31,7 +31,7 @@ export class MyServiceService {
   }
 
   updateFlight(id: number, flight: FlightInsertForm): Observable<FlightDTO> {
-    return this.http.put<FlightDTO>(`http://localhost:8080/flight/${id}`, flight)
+    return this.http.put<FlightDTO>(this.baseUrl + id, flight)
       .pipe(
         catchError((err: HttpErrorResponse) => {
           // handle error and return an observable with error message

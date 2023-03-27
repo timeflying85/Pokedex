@@ -14,7 +14,7 @@
         <p><b>Captain :</b> {{ flight.captain.name }}</p>
         <p><b>Copilot :</b> {{ flight.firstOfficer.name }}</p>
         <p><b>Plane :</b> {{ flight.plane.callSign }} / {{ flight.plane.capacity }} seats</p>
-        <a class="update" [routerLink]="['../update' + flight.id]">Update</a>
+        <a class="update" [routerLink]="['../update/' + flight.id]">Update</a>
         <a class="delete" (click)="deleteFlight(flight.id)">Delete</a>
         <a class="one" [routerLink]="['../' + flight.id]"> -> Flight details</a>
       </fieldset>

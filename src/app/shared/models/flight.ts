@@ -45,10 +45,22 @@ export interface FlightInsertForm {
   id: number;
   departureTime: Date;
   arrivalTime: Date;
+  captain: pilotDTO;
+  firstOfficer: pilotDTO;
+  departure: AirportDTO;
+  destination: AirportDTO;
+  plane: PlaneDTO;
+  company: CompanyDTO;
+}
+
+export interface FlightCreate{
+  id: number;
+  departureTime: Date;
+  arrivalTime: Date;
   captain: string;
   firstOfficer: string;
-  departureAirportId: number;
-  arrivalAirportId: number;
-  plane: number;
+  departureAirportId: string;
+  arrivalAirportId: string;
+  plane: string;
   company: string;
 }

@@ -4,25 +4,25 @@
 
     <div>
       <label for="departure">Departure : </label>
-      <input type="text" id="departure" formControlName="departure" placeholder="Enter your departure"/>
-      <span *ngIf="flightForm.controls['departure'].invalid && flightForm.controls['departure'].touched"> Departure is required</span>
+      <input type="text" id="departure" formControlName="departureAirportId" placeholder="Enter your departure"/>
+      <span *ngIf="flightForm.controls['departureAirportId'].invalid && flightForm.controls['departureAirportId'].touched"> Departure is required</span>
     </div>
 
     <div>
       <label for="destination">Destination : </label>
-      <input type="text" id="destination" formControlName="destination" placeholder="Choose your destination"/>
-      <span *ngIf="flightForm.controls['destination'].invalid && flightForm.controls['destination'].touched"> Destination is required</span>
+      <input type="text" id="destination" formControlName="arrivalAirportId" placeholder="Choose your destination"/>
+      <span *ngIf="flightForm.controls['arrivalAirportId'].invalid && flightForm.controls['arrivalAirportId'].touched"> Destination is required</span>
     </div>
 
     <div>
       <label for="departureTime">Departure Time : </label>
-      <input type="text" id="departureTime" formControlName="departureTime" placeholder="Enter ETD"/>
+      <input type="datetime-local" id="departureTime" formControlName="departureTime" placeholder="Enter ETD"/>
       <span *ngIf="flightForm.controls['departureTime'].invalid && flightForm.controls['departureTime'].touched"> ETD is required</span>
     </div>
 
     <div>
       <label for="arrivalTime">Arrival Time : </label>
-      <input type="text" id="arrivalTime" formControlName="arrivalTime" placeholder="Enter ETA"/>
+      <input type="datetime-local" id="arrivalTime" formControlName="arrivalTime" placeholder="Enter ETA"/>
       <span *ngIf="flightForm.controls['arrivalTime'].invalid && flightForm.controls['arrivalTime'].touched"> ETA is required</span>
     </div>
 
@@ -34,8 +34,8 @@
 
     <div>
       <label for="copilot">Copilot : </label>
-      <input type="text" id="copilot" formControlName="copilot" placeholder="Enter Copilot Name"/>
-      <span *ngIf="flightForm.controls['copilot'].invalid && flightForm.controls['copilot'].touched"> Copilot is required</span>
+      <input type="text" id="copilot" formControlName="firstOfficer" placeholder="Enter Copilot Name"/>
+      <span *ngIf="flightForm.controls['firstOfficer'].invalid && flightForm.controls['firstOfficer'].touched"> Copilot is required</span>
     </div>
 
     <div>
@@ -52,7 +52,7 @@
 
     <p></p>
 
-    <button class="button" type="submit" (click)="createFlight()">Create Flight</button>
+    <button class="button" type="submit">Create Flight</button>
 
   </form>
 </fieldset>

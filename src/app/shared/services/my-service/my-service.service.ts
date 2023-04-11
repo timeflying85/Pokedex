@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
-import { FlightDTO, FlightInsertForm } from '../../models/flight';
+import { FlightCreate, FlightDTO, FlightInsertForm } from '../../models/flight';
 
 @Injectable({
   providedIn: 'root'
@@ -17,8 +17,8 @@ export class MyServiceService {
   }
 
 
-  createFlight(flight: FlightInsertForm): Observable<any> {
-    return this.http.post('${this.baseUrl}add', flight);
+  createFlight(flight: FlightCreate): Observable<any> {
+    return this.http.post(this.baseUrl +'add', flight);
   }
 
 
@@ -34,6 +34,9 @@ export class MyServiceService {
     return this.http.put<FlightDTO>(this.baseUrl + id + '/update', flight)
       .pipe(
         catchError((err: HttpErrorResponse) => {
+
+          console.log(flight);
+
           // handle error and return an observable with error message
           return throwError('Something went wrong while updating the flight.');
         })

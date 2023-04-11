@@ -18,12 +18,12 @@ export class CreateComponent {
   constructor(private _myService: MyServiceService, private _router: Router, private _formBuilder: FormBuilder){
 
     this.flightForm = this._formBuilder.group({
-      departure: ['', [Validators.required]],
-      destination: ['', [Validators.required]],
+      departureAirportId: ['', [Validators.required]],
+      arrivalAirportId: ['', [Validators.required]],
       departureTime: ['', [Validators.required]],
       arrivalTime: ['', [Validators.required]],
       captain: ['', [Validators.required]],
-      copilot: ['', [Validators.required]],
+      firstOfficer: ['', [Validators.required]],
       plane: ['', [Validators.required]],
       company: ['', [Validators.required]]
     })
@@ -32,7 +32,16 @@ export class CreateComponent {
   }
 
   createFlight() : void {
-    this._myService.createFlight(this.flightForm.value);
+    this._myService.createFlight(this.flightForm.value).subscribe({
+      next : (data) => {
+        console.log(data);
+
+      },
+      error : (err) => {
+        console.log(err);
+
+      }
+    });
     //this._router.navigate()
   }
 

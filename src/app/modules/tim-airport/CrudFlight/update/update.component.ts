@@ -108,7 +108,7 @@ flightForm!: FormGroup;
     console.log(this.flightToUpdate);
 
 
-    this.myService.updateFlight(this.flightToUpdate.id, this.flightForm.value).subscribe(() => {
+    this.myService.updateFlight(this.flightToUpdate.id, this.flightToUpdate).subscribe(() => {
       //this.router.navigate(['/']);
     });
   }
